@@ -3,6 +3,8 @@ import Recipes from '../components/Recipes'
 import RecipeInput from '../components/RecipeInput'
 import { connect } from 'react-redux'
 import fetchRecipes from '../actions/fetchRecipes'
+import { Route, Switch} from 'react-router-dom'
+import Recipe from '../components/Recipe'
 
 class RecipesContainer extends React.Component {
 
@@ -14,8 +16,11 @@ class RecipesContainer extends React.Component {
 
         return(
             <div>
-                <RecipeInput/><br></br>
-                <Recipes recipes={this.props.recipes}/>
+               
+                <Route path='/recipes/new' component={RecipeInput}/>
+                <Route exact path='/recipes' render={(routerProps) => < Recipes {...routerProps} recipes={this.props.recipes}/>}/>
+                <Route path='/recipes/:id' render={(routerProps) => < Recipe {...routerProps} recipes={this.props.recipes}/>}/>
+                
             </div>
         )
     }
