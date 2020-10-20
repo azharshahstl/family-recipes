@@ -14,6 +14,12 @@ class RecipeInput extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault();
         this.props.addRecipe(this.state)
+        this.setState({
+            name:'', 
+            ingredients: '',
+            directions: '', 
+            cuisine: ''
+        })
     }
 
     handleOnChange = (event) => {
@@ -24,6 +30,10 @@ class RecipeInput extends React.Component {
     }
 
     render() {
+        if(!this.props.user.isLoggedIn)
+        {
+            return null;
+        }
         return(
             <div>
                 <form onSubmit={this.handleOnSubmit}>
