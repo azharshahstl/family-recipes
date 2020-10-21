@@ -5,12 +5,12 @@ import UsersContainer from './UsersContainer'
 import '../App.css'
 import  NavBar  from '../components/NavBar'
 import { reloadUser } from '../actions/reloadUser'
-import { LoggedInUsersContainer }  from './LoggedInUsersContainer'
+import  LoggedInUsersContainer   from './LoggedInUsersContainer'
 
 
 class  App extends React.Component {
 
-  componentDidMount(){
+  reloadUserIntoState(){
     const loggedInUser = localStorage.getItem("user");
     
     if (loggedInUser) {
@@ -19,23 +19,17 @@ class  App extends React.Component {
     }
   }
 
-  
+  componentDidMount() {
+    this.reloadUserIntoState()
+  }
 
   render() {
-
-    let user = this.props.user
-
-    //   if (user === {}){
-    //     return (user = false)
-    //   }
     
-    console.log(user)
-    debugger
     return(
       <div className="App">
         <NavBar/>
         <UsersContainer/>
-        {user.isLoggedIn ? <LoggedInUsersContainer user={this.props.user}/> : null}
+        <LoggedInUsersContainer/> 
       </div>
     );
   }  

@@ -19,7 +19,6 @@ export default function usersReducer(state = {user: {}}, action) {
 
     case 'LOGOUT_USER':
         console.log(action.payload)
-        debugger;
         localStorage.clear()
         return {user: action.payload}
 

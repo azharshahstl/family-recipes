@@ -1,4 +1,3 @@
-import React from 'react'
 
 export const logoutUser = (user) => {
     console.log(user)

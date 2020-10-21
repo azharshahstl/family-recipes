@@ -1,34 +1,32 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import  Recipe  from '../components/Recipe'
 import RecipeInput from '../components/RecipeInput'
 import  Recipes  from '../components/Recipes'
+import { reloadUser } from '../actions/reloadUser'
 
-export const LoggedInUsersContainer = (props) => {
+class LoggedInUsersContainer extends React.Component {
 
-    console.log(props)
-    debugger;
-
-    // const isLoggedIn = props.user.isLoggedIn
-
-    // if (isLoggedIn){
-    //   let recipeInput = <RecipeInput/>
-    //   let recipes = <Recipes/> 
-    //   let recipe = <Recipe/>
-    // }
-
+  
+    render(){
+        console.log(this.props.user)
+        debugger;
         return(
 
             <div>
-                <RecipeInput isLoggedIn={props.user.isLoggedIn}/>
-                <Recipes isLoggedIn={props.user.isLoggedIn}/>
-                <Recipe isLoggedIn={props.user.isLoggedIn}/>    
+                {this.props.user.user.jwt !== undefined ? <RecipeInput user={this.props.user}/> : null } 
+                {/* {this.props.user ? <Recipes isLoggedIn={this.props.user}/> : null} */}
+                {/* {this.props.user ? <Recipe isLoggedIn={this.props.user}/>  : null}   */}
             </div>
         )
+        }
     
-
-
-
-
-
-
 }
+
+const mapStateToProps = (state) => {
+    return {
+        user: state.user
+    }
+}
+
+export default connect(mapStateToProps, { reloadUser })(LoggedInUsersContainer)
