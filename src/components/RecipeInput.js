@@ -13,7 +13,8 @@ class RecipeInput extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault();
-        this.props.addRecipe(this.state)
+        let user = this.props.user.user.user
+        this.props.addRecipe(this.state, user.id )
         this.setState({
             name:'', 
             ingredients: '',
@@ -30,9 +31,6 @@ class RecipeInput extends React.Component {
     }
 
     render() {
-
-        console.log(this.props.user)
-        debugger;
 
         return(
             <div>

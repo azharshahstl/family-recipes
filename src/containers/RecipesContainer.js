@@ -10,10 +10,7 @@ import Recipe from '../components/Recipe'
 
 class RecipesContainer extends React.Component {
 
-    // componentDidMount() {
-    //     this.props.fetchRecipes()
-    // }
-
+    
     render() {
 
         return(

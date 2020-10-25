@@ -6,6 +6,7 @@ import '../App.css'
 import  NavBar  from '../components/NavBar'
 import { reloadUser } from '../actions/reloadUser'
 import  LoggedInUsersContainer   from './LoggedInUsersContainer'
+import fetchRecipes from '../actions/fetchRecipes'
 
 
 class  App extends React.Component {
@@ -21,10 +22,11 @@ class  App extends React.Component {
 
   componentDidMount() {
     this.reloadUserIntoState()
+    debugger;
   }
 
   render() {
-    
+    debugger;
     return(
       <div className="App">
         <NavBar/>
@@ -40,4 +42,4 @@ const mapStateToProps = (state) => {
     user: state.user}
 }
 
-export default connect( mapStateToProps, { reloadUser })(App);
+export default connect( mapStateToProps, { reloadUser, fetchRecipes })(App);
