@@ -28,7 +28,7 @@ class UserLogin extends React.Component {
     render() {
         return (
              <div>
-                    <form onSubmit={this.handleOnSubmit} id='logInForm'>
+                    <form onSubmit={this.handleOnSubmit} id='logInForm' className='form'>
                         <label>Enter Your Email:</label>
                         <input type='text' placeholder='email' name='email' value={this.state.email} onChange={this.handleOnChange}/><br></br>
                         <label>Enter Your Password:</label>

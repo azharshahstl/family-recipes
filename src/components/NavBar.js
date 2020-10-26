@@ -1,12 +1,13 @@
 import React from 'react'
 import { Nav, Navbar } from "react-bootstrap";
+import '../App.css'
 
 const NavBar = (props) => {
 
 return (
     <div>
       <div className='header'>
-        Family Recipes
+        <h1>Family Recipes</h1>
       </div>
 
   

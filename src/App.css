@@ -1,3 +1,79 @@
 .App {
+    
+}
+
+.header {
+    text-align: center;
+    padding-bottom: 5px;
+    font-family: Apple Chancery;
+}
+
+.navbar {
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: double;
+}
+
+body {
     background-color: bisque;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.form {
+    border: double green; 
+    padding: 5px;
+    margin: 25px;
+    text-align: center;
+    border-width: 80%;
+}
+
+input[type=text] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+  input[type=text]:focus {
+    border: 3px solid #555;
+  }
+  input[type=textarea] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+  input[type=textarea]:focus {
+    border: 3px solid #555;
+  }
+
+  input[type=password] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+  input[type=password]:focus {
+    border: 3px solid #555;
+  }
+input[type=submit] {
+    margin: 12px 3px;
 }
