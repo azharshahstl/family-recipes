@@ -1,26 +1,30 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
 
 const Recipe = (props) => {
 
     console.log(props)
+    debugger;
 
-    let user = props.user.user
+    const recipes = props.recipes
 
-    if (user.recipes == undefined){
-        return <div>You do not have a recipe to display.</div>
-    }
-    else {
-    
+    debugger;
 
-    let recipe = props.recipes.filter(recipe => recipe.id == props.match.params.id)[0]
+    // if (recipes.length === 0 || props.match === undefined){
+    //     return <div>You have not selected a recipe to display.</div>
+    // }
+    // else {
+        console.log(recipes)
+        debugger;
+        let recipe = recipes.filter(recipe => recipe.id == props.match.params.id)
+        console.log(recipe)
+        debugger;
 
             return (
                 <li>
-                    {/* {recipe ? null : <Redirect to='/recipes'/>} */}
-                    {recipe ? recipe.name : null} - {recipe ? recipe.ingredients : null} - {recipe ? recipe.directions : null}
+            
+                    {recipe[0] ? recipe[0].name : null} - {recipe ? recipe[0].ingredients : null} - {recipe ? recipe[0].directions : null}
                 </li>
             )
-    }
+    // }
 }
 export default Recipe

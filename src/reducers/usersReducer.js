@@ -6,8 +6,8 @@ export default function usersReducer(state = {user: {}}, action) {
          console.log(action.payload)
          debugger;
         localStorage.setItem('jwt_token', action.payload.jwt)
-        localStorage.setItem('user', JSON.stringify(action.payload.user))
-        return {user: action.payload.user}
+        localStorage.setItem('user', JSON.stringify(action.payload))
+        return {user: action.payload}
 
     case 'RELOAD_USER': 
         return {user: action.payload}
