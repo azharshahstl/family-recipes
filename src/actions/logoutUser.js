@@ -8,7 +8,6 @@ export const logoutUser = (user) => {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
-                // Authorization: `Bearer ${localStorage.getItem('jwt_token')}`
             },
             method: 'PATCH',
             body: JSON.stringify({user})

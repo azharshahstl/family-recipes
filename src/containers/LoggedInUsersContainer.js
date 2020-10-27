@@ -6,13 +6,6 @@ import  Recipes  from '../components/Recipes'
 
 class LoggedInUsersContainer extends React.Component {
 
-    // componentDidMount() {
-    //     debugger;
-    //     if (this.props.user.user.jwt !== undefined)
-    //     this.props.fetchRecipes(this.props.user.user.id)
-    // }
-
-
     render(){
         return(
             <div className='loggedInUser'>

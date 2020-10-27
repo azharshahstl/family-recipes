@@ -4,10 +4,6 @@ import { Route, Link } from 'react-router-dom'
 
 const Recipes = (props) => {
 
-    
-    console.log(props)
-    debugger;
-
     let recipes = props.recipes.recipes
 
     if (recipes.length === 0){

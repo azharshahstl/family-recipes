@@ -3,10 +3,9 @@ export default function usersReducer(state = {user: {}}, action) {
 
     switch(action.type){
      case 'CREATE_USER':
-         console.log(action.payload)
-         debugger;
         localStorage.setItem('jwt_token', action.payload.jwt)
         localStorage.setItem('user', JSON.stringify(action.payload))
+
         return {user: action.payload}
 
     case 'RELOAD_USER': 
@@ -22,6 +21,7 @@ export default function usersReducer(state = {user: {}}, action) {
     case 'LOGOUT_USER':
         console.log(action.payload)
         localStorage.clear()
+        
         return {user: action.payload}
 
      default:

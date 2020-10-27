@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react'
 import React from 'react'
 import { connect } from 'react-redux'
 import { deleteRecipe } from '../actions/deleteRecipe'
@@ -6,8 +5,6 @@ import { deleteRecipe } from '../actions/deleteRecipe'
 class Recipe extends React.Component {
 
     handleDelete = (recipe) => {
-        console.log(recipe)
-        debugger;
         this.props.deleteRecipe(recipe)
     }
         

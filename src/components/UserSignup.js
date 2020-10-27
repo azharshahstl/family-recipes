@@ -13,8 +13,6 @@ class UserSignup extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state)
-        debugger
         this.props.createUser(this.state);
         this.setState({
             name:'', 
