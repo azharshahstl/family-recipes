@@ -21,7 +21,7 @@ const Recipes = (props) => {
 
         return (
             <div className='recipes'>
-                <h4>Recipes</h4>
+                <h4 className='recipes-list'>Recipes</h4>
                 {recipes.map(recipe => 
                 <div key={recipe.id}><Link to={`/recipes/${recipe.id}`}>{recipe.name}</Link></div>)}
                  <Route path='/recipes/:id' render={(routerProps) => <Recipe {...routerProps} recipes={recipes}/>}/>

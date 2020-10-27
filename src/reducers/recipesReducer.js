@@ -13,6 +13,14 @@ export default function recipesReducer(state = {recipes: []}, action) {
      case 'RELOAD_RECIPES':
          return {recipes: action.payload}
 
+     case 'DELETE_RECIPE': 
+            console.log(action.payload)
+            debugger; 
+            let updatedRecipes = state.recipes.filter(recipe => recipe.id != action.payload.id)
+            localStorage.setItem('recipes', JSON.stringify(updatedRecipes))
+            return {...state, recipes: updatedRecipes}
+
+
 
      default:
      return state;

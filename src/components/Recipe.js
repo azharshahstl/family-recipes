@@ -1,32 +1,31 @@
+import { render } from '@testing-library/react'
 import React from 'react'
+import { connect } from 'react-redux'
+import { deleteRecipe } from '../actions/deleteRecipe'
 
-const Recipe = (props) => {
+class Recipe extends React.Component {
 
-    console.log(props)
-    debugger;
-
-    const recipes = props.recipes
-
-    debugger;
-
-    // if (recipes.length === 0 || props.match === undefined){
-    //     return <div>You have not selected a recipe to display.</div>
-    // }
-    // else {
-        console.log(recipes)
-        debugger;
-        let recipe = recipes.filter(recipe => recipe.id == props.match.params.id)
+    handleDelete = (recipe) => {
         console.log(recipe)
         debugger;
+        this.props.deleteRecipe(recipe)
+    }
+        
+    render(){
+        const recipes = this.props.recipes
+
+        let recipe = recipes.filter(recipe => recipe.id == this.props.match.params.id)
 
             return (
                 <div className='recipe'>
-                    <li>
-                    <h4>Detailed Recipe</h4>
-                        {recipe[0] ? recipe[0].name : null} - {recipe ? recipe[0].ingredients : null} - {recipe ? recipe[0].directions : null}
-                    </li>
+                    
+                    <h4 className='recipe-details'>Detailed Recipe</h4>
+                    <h4>Name:</h4>{recipe[0] ? recipe[0].name : null} 
+                    <h4>Ingredients:</h4>{recipe ? recipe[0].ingredients : null} 
+                    <h4>Directions:</h4>{recipe ? recipe[0].directions : null}
+                    <button onClick={() => this.handleDelete(recipe)}>Delete Recipe</button>
                 </div>
             )
-    // }
+    }
 }
-export default Recipe
+export default connect(null, { deleteRecipe })(Recipe)
