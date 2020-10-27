@@ -33,7 +33,8 @@ class RecipeInput extends React.Component {
     render() {
 
         return(
-            <div>
+            <div className='recipeInput'>
+                <h4>Create a New Recipe!</h4>
                 <form onSubmit={this.handleOnSubmit}>
                     <label>Recipe Name: </label>
                     <input type='text' placeholder='Recipe Name' value ={this.state.name} name='name' onChange={this.handleOnChange}/><br></br>

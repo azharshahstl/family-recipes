@@ -20,10 +20,12 @@ const Recipe = (props) => {
         debugger;
 
             return (
-                <li>
-            
-                    {recipe[0] ? recipe[0].name : null} - {recipe ? recipe[0].ingredients : null} - {recipe ? recipe[0].directions : null}
-                </li>
+                <div className='recipe'>
+                    <li>
+                    <h4>Detailed Recipe</h4>
+                        {recipe[0] ? recipe[0].name : null} - {recipe ? recipe[0].ingredients : null} - {recipe ? recipe[0].directions : null}
+                    </li>
+                </div>
             )
     // }
 }

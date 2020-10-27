@@ -15,11 +15,12 @@ class LoggedInUsersContainer extends React.Component {
 
     render(){
         return(
-            <div className='container'>
-                <div>
-                    {this.props.user.user.jwt !== undefined ? <RecipeInput user={this.props.user}/>  : null } 
-                    {this.props.user.user.jwt !== undefined ? <Recipes recipes={this.props.recipes}/> : null}
-                </div>
+            <div className='loggedInUser'>
+                
+                    <div className='welcome'>{this.props.user.user.jwt !== undefined ? <h3>{`Welcome back, ${this.props.user.user.user.name}`}</h3>  : null }</div>
+                    <div className='float-child'>{this.props.user.user.jwt !== undefined ? <RecipeInput user={this.props.user}/>  : null }</div>
+                    <div className='float-child'>{this.props.user.user.jwt !== undefined ? <Recipes recipes={this.props.recipes}/> : null}</div>
+                
             </div>
         )
         }
