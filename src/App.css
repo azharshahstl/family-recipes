@@ -107,6 +107,11 @@ input[type=submit] {
     text-align: center;
 }
 
+.recipes {
+    flex-direction: row;
+    margin: 10 px;
+}
+
 
 
 
