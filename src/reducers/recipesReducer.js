@@ -14,7 +14,7 @@ export default function recipesReducer(state = {recipes: []}, action) {
          return {recipes: action.payload}
 
      case 'DELETE_RECIPE': 
-            let updatedRecipes = state.recipes.filter(recipe => recipe.id != action.payload.id)
+            let updatedRecipes = state.recipes.filter(recipe => recipe.id !== action.payload.id)
             localStorage.setItem('recipes', JSON.stringify(updatedRecipes))
             
             return {...state, recipes: updatedRecipes}
