@@ -1,7 +1,7 @@
 export const addRecipe = (recipe, userId) => {
 
     return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/users/${userId}/recipes`, {
+        fetch(`https://git.heroku.com/agile-ocean-22181.git/api/v1/users/${userId}/recipes`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

@@ -4,7 +4,7 @@ export const logoutUser = (user) => {
     debugger;
     user.isLoggedIn = false
     return(dispatch) => {
-        fetch(`http://localhost:3000/api/v1/users/${user.id}`, {
+        fetch(`https://git.heroku.com/agile-ocean-22181.git/api/v1/users/${user.id}`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',

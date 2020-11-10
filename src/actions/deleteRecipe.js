@@ -1,6 +1,6 @@
 export const deleteRecipe = (recipe) => {
     return(dispatch) => {
-        fetch(`http://localhost:3000/api/v1/users/${recipe[0].user_id}/recipes/${recipe[0].id}`, {
+        fetch(`https://git.heroku.com/agile-ocean-22181.git/api/v1/users/${recipe[0].user_id}/recipes/${recipe[0].id}`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

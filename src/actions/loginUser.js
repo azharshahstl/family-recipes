@@ -3,7 +3,7 @@
 export const loginUser = (user) => {
     
     return(dispatch) => {
-        fetch('http://localhost:3000/api/v1/login', {
+        fetch('https://git.heroku.com/agile-ocean-22181.git/api/v1/login', {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
