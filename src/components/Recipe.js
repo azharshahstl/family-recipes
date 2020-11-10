@@ -11,7 +11,7 @@ class Recipe extends React.Component {
     render(){
         const recipes = this.props.recipes
 
-        let recipe = recipes.filter(recipe => recipe.id == this.props.match.params.id)
+        let recipe = recipes.filter(recipe => recipe.id == parseInt(this.props.match.params.id))
 
             return (
                 <div className='recipe'>
