@@ -1,7 +1,7 @@
 export const createUser = (user) => {
 
     return (dispatch) => {
-        fetch('https://git.heroku.com/agile-ocean-22181.git/api/v1/users', {
+        fetch('https://agile-ocean-22181.herokuapp.com/api/v1/users', {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

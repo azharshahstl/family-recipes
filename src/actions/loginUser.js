@@ -3,7 +3,7 @@
 export const loginUser = (user) => {
     
     return(dispatch) => {
-        fetch('https://git.heroku.com/agile-ocean-22181.git/api/v1/login', {
+        fetch('https://agile-ocean-22181.herokuapp.com/api/v1/login', {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
@@ -18,7 +18,7 @@ export const loginUser = (user) => {
             }
             else {
                 dispatch({ type: 'LOGIN_USER', payload: user })
-                fetch(`http://localhost:3000/api/v1/users/${user.user.id}/recipes`)
+                fetch(`https://agile-ocean-22181.herokuapp.com/api/v1/users/${user.user.id}/recipes`)
                 .then(response => response.json())
                 .then(recipes=> {
                     dispatch({ type: 'FETCH_RECIPES', payload: recipes })
