@@ -1,6 +1,3 @@
-.App {
-    
-}
 
 .header, .welcome , h4{
     text-align: center;
@@ -15,7 +12,10 @@
 }
 
 body {
-    background-color: bisque;
+    /* background-color: bisque; */
+    background-image: url('/handwritten_recipe.jpg');
+    background-size: cover;
+   
 }
 
 .form {

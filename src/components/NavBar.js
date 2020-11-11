@@ -4,6 +4,11 @@ import '../App.css'
 
 const NavBar = (props) => {
 
+  const myStyle = {
+    paddingRight: '20px', 
+    color: 'black'
+  }
+
 return (
     <div>
       <div className='header'>
@@ -12,10 +17,10 @@ return (
 
   
       <div><Nav className="navbar">
-        <Nav.Link href="/" style={{paddingRight: '20px'}}>Home</Nav.Link>
-        <Nav.Link href="/users/new" style={{paddingRight: '20px'}}>Sign Up</Nav.Link>
-        <Nav.Link href="/login" style={{paddingRight: '20px'}}>Log In</Nav.Link>  
-        <Nav.Link href="/logout" style={{paddingRight: '20px'}}>Log Out</Nav.Link>  
+        <Nav.Link href="/" style={myStyle}>Home</Nav.Link>
+        <Nav.Link href="/users/new" style={myStyle}>Sign Up</Nav.Link>
+        <Nav.Link href="/login" style={myStyle}>Log In</Nav.Link>  
+        <Nav.Link href="/logout" style={myStyle}>Log Out</Nav.Link>  
         </Nav>
       </div>
     </div>
