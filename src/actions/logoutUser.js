@@ -1,7 +1,5 @@
 
 export const logoutUser = (user) => {
-    console.log(user)
-    debugger;
     user.isLoggedIn = false
     return(dispatch) => {
         fetch(`https://agile-ocean-22181.herokuapp.com/api/v1/users/${user.id}`, {

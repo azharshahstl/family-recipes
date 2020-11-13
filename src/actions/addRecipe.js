@@ -11,8 +11,6 @@ export const addRecipe = (recipe, userId) => {
         })
         .then(resp => resp.json())
         .then(recipe => {
-            console.log(recipe)
-            debugger;
             if (recipe.error){
                 alert(recipe.error)
             }
